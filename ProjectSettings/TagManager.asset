@@ -9,6 +9,8 @@ TagManager:
   - SouthCollider
   - WestCollider
   - Spawner
+  - Remover
+  - Land
   layers:
   - Default
   - TransparentFX
