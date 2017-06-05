@@ -11,6 +11,7 @@ TagManager:
   - Spawner
   - Remover
   - Land
+  - Database
   layers:
   - Default
   - TransparentFX

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class NorthTileCollision : MonoBehaviour {
 
+	public TileDatabase tileDb;
+
 	//Reference the parent object of the colliders
 	public GameObject levelGenerator;
 	//Reference the transform of the LevelGenerator GameObject
@@ -24,6 +26,7 @@ public class NorthTileCollision : MonoBehaviour {
 	public float removeSize;
 
 	void Start(){
+		tileDb = GameObject.FindGameObjectWithTag ("Database").GetComponent<TileDatabase> ();
 		//Assign the transform of the LevelGenerator to genPosition
 		genPosition = levelGenerator.gameObject.transform;
 		//Assign the spawner GameObject in the scene to spawner
@@ -47,23 +50,23 @@ public class NorthTileCollision : MonoBehaviour {
 			//Move the parent of the colliders to the next row
 			genPosition.position = new Vector3 (genPosition.position.x + tileSize, genPosition.position.y, genPosition.position.z);
 			//Spawn a tile at the centre of the spawner
-			Instantiate (sampleTile, spawnerTransform.position, Quaternion.identity);
+			Instantiate (tileDb.tiles[Random.Range(0, tileDb.tiles.Count)], spawnerTransform.position, Quaternion.Euler(tileDb.tileRots[Random.Range(0, tileDb.tileRots.Count)]));
 			//Spawn a tile next to the first tile
-			Instantiate (sampleTile, new Vector3 (spawnerTransform.position.x, spawnerTransform.position.y, spawnerTransform.position.z + tileSize), Quaternion.identity);
+			Instantiate (tileDb.tiles[Random.Range(0, tileDb.tiles.Count)], new Vector3 (spawnerTransform.position.x, spawnerTransform.position.y, spawnerTransform.position.z + tileSize), Quaternion.Euler(tileDb.tileRots[Random.Range(0, tileDb.tileRots.Count)]));
 			//Spawn a tile on the opposite side of the first tile
-			Instantiate (sampleTile, new Vector3 (spawnerTransform.position.x, spawnerTransform.position.y, spawnerTransform.position.z - tileSize), Quaternion.identity);
+			Instantiate (tileDb.tiles[Random.Range(0, tileDb.tiles.Count)], new Vector3 (spawnerTransform.position.x, spawnerTransform.position.y, spawnerTransform.position.z - tileSize), Quaternion.Euler(tileDb.tileRots[Random.Range(0, tileDb.tileRots.Count)]));
 			//Move the spawner to the centre of the LevelGenerator GameObject
 			spawnerTransform.localPosition = Vector3.zero;
 			//Move the tileRemover so that it is opposite to the spawner
-			removerTransform.position = new Vector3 (removerTransform.position.x - (removeSize * 2), removerTransform.position.y - 1, removerTransform.position.z);
+			removerTransform.position = new Vector3 (removerTransform.position.x - (removeSize * 2), removerTransform.position.y - 5, removerTransform.position.z);
 			//Start waiting co-routine;
-			StartCoroutine (Waiting ());
+			//StartCoroutine (Waiting ());
 		}
 	}
 
-	IEnumerator Waiting(){
-		yield return new WaitForSeconds (0.0000001f);
+	//IEnumerator Waiting(){
+		//yield return new WaitForSeconds (0.1f);
 		//Move tileRemover to the centre of the LevelGenerator GameObject
-		removerTransform.localPosition = new Vector3 (0, 1, 0);
-		}
+		//removerTransform.localPosition = new Vector3 (0, 1, 0);
+		//}
 }

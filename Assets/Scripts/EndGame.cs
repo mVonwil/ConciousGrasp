@@ -34,13 +34,13 @@ public class EndGame : MonoBehaviour {
 	void SpawnWalls(){
 		firstWall = Instantiate (sampleWall, new Vector3(0, 3, 0), Quaternion.Euler(0, 90, 0));
 		firstWall.transform.parent = endGame.transform;
-		firstWall.transform.localPosition = new Vector3 (23, 2.51f, 0);
+		firstWall.transform.localPosition = new Vector3 (22, 2.51f, 0);
 		secondWall = Instantiate (sampleWall, new Vector3(0, 3, 0), Quaternion.Euler(0, 90, 0));
 		secondWall.transform.parent = endGame.transform;
-		secondWall.transform.localPosition = new Vector3 (-23, 2.51f, 0);
+		secondWall.transform.localPosition = new Vector3 (-22, 2.51f, 0);
 		thirdWall = Instantiate (sampleWall, new Vector3(0, 3, 0), Quaternion.Euler(0, 0, 0));
 		thirdWall.transform.parent = endGame.transform;
-		thirdWall.transform.localPosition = new Vector3 (0, 2.51f, 23);
+		thirdWall.transform.localPosition = new Vector3 (0, 2.51f, 22);
 		endHouse = Instantiate (sampleHouse, new Vector3(0, 0, 0), Quaternion.Euler(0, 180, 0));
 		endHouse.transform.parent = endGame.transform;
 		endHouse.transform.localPosition = new Vector3 (0, 0, 0);

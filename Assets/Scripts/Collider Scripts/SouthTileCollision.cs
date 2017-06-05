@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SouthTileCollision : MonoBehaviour {
 
+	public TileDatabase tileDb;
+
 	public GameObject levelGenerator;
 	public Transform genPosition;
 	public float tileSize = 15f;
@@ -18,6 +20,7 @@ public class SouthTileCollision : MonoBehaviour {
 	public float removeSize;
 
 	void Start(){
+		tileDb = GameObject.FindGameObjectWithTag ("Database").GetComponent<TileDatabase> ();
 		genPosition = levelGenerator.gameObject.transform;
 		spawner = GameObject.FindGameObjectWithTag ("Spawner");
 		spawnerTransform = spawner.GetComponent<Transform> ();
@@ -34,20 +37,20 @@ public class SouthTileCollision : MonoBehaviour {
 			Debug.Log ("South");
 			spawnerTransform.position = new Vector3 (spawnerTransform.position.x - tileSize, spawnerTransform.position.y, spawnerTransform.position.z);
 			genPosition.position = new Vector3 (genPosition.position.x - tileSize, genPosition.position.y, genPosition.position.z);
-			Instantiate (sampleTile, spawnerTransform.position, Quaternion.identity);
-			Instantiate(sampleTile, new Vector3 (spawnerTransform.position.x, spawnerTransform.position.y, spawnerTransform.position.z + tileSize), Quaternion.identity);
-			Instantiate(sampleTile, new Vector3 (spawnerTransform.position.x, spawnerTransform.position.y, spawnerTransform.position.z - tileSize), Quaternion.identity);
+			Instantiate (tileDb.tiles[Random.Range(0, tileDb.tiles.Count)], spawnerTransform.position, Quaternion.Euler(tileDb.tileRots[Random.Range(0, tileDb.tileRots.Count)]));
+			Instantiate(tileDb.tiles[Random.Range(0, tileDb.tiles.Count)], new Vector3 (spawnerTransform.position.x, spawnerTransform.position.y, spawnerTransform.position.z + tileSize), Quaternion.Euler(tileDb.tileRots[Random.Range(0, tileDb.tileRots.Count)]));
+			Instantiate(tileDb.tiles[Random.Range(0, tileDb.tiles.Count)], new Vector3 (spawnerTransform.position.x, spawnerTransform.position.y, spawnerTransform.position.z - tileSize), Quaternion.Euler(tileDb.tileRots[Random.Range(0, tileDb.tileRots.Count)]));
 			spawnerTransform.localPosition = Vector3.zero;
 			//Move the tileRemover so that it is opposite to the spawner
-			removerTransform.position = new Vector3 (removerTransform.position.x + (removeSize * 2), removerTransform.position.y - 1, removerTransform.position.z);
+			removerTransform.position = new Vector3 (removerTransform.position.x + (removeSize * 2), removerTransform.position.y - 5, removerTransform.position.z);
 			//Start waiting co-routine;
-			StartCoroutine (Waiting ());
+			//StartCoroutine (Waiting ());
 		}
 	}
 
-	IEnumerator Waiting(){
-		yield return new WaitForSeconds (0.0000001f);
+	//IEnumerator Waiting(){
+		//yield return new WaitForSeconds (0.1f);
 		//Move tileRemover to the centre of the LevelGenerator GameObject
-		removerTransform.localPosition = new Vector3 (0, 1, 0);
-	}
+		//removerTransform.localPosition = new Vector3 (0, 1, 0);
+	//}
 }
