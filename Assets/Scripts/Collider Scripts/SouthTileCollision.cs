@@ -42,7 +42,7 @@ public class SouthTileCollision : MonoBehaviour {
 			Instantiate(tileDb.tiles[Random.Range(0, tileDb.tiles.Count)], new Vector3 (spawnerTransform.position.x, spawnerTransform.position.y, spawnerTransform.position.z - tileSize), Quaternion.Euler(tileDb.tileRots[Random.Range(0, tileDb.tileRots.Count)]));
 			spawnerTransform.localPosition = Vector3.zero;
 			//Move the tileRemover so that it is opposite to the spawner
-			removerTransform.position = new Vector3 (removerTransform.position.x + (removeSize * 2), removerTransform.position.y - 5, removerTransform.position.z);
+			removerTransform.position = new Vector3 (removerTransform.position.x + (removeSize * 2), 0, removerTransform.position.z);
 		}
 	}
 }

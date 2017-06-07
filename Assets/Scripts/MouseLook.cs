@@ -19,6 +19,6 @@ public class MouseLook : MonoBehaviour {
 
 		transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
 
-		transform.position = playerBody.transform.position;
+		transform.position = new Vector3(playerBody.transform.position.x, playerBody.transform.position.y + 1, playerBody.transform.position.z);
 	}
 }

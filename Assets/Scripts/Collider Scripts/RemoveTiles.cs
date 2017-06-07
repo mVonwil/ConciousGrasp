@@ -18,7 +18,7 @@ public class RemoveTiles : MonoBehaviour {
 		if (remove.gameObject.tag == "Remover" && trig == false) {
 			Debug.Log ("enter" + Time.frameCount + this.gameObject.name);
 			Destroy (this.gameObject);
-			removerTransform.localPosition = new Vector3 (0, 5, 0);
+			removerTransform.localPosition = new Vector3 (0, 20, 0);
 			trig = true;
 
 		}

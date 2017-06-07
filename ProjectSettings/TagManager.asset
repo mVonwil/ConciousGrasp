@@ -12,6 +12,7 @@ TagManager:
   - Remover
   - Land
   - Database
+  - Fog
   layers:
   - Default
   - TransparentFX

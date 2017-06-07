@@ -6,6 +6,7 @@ public class EndGame : MonoBehaviour {
 
 	public float timeLimit;
 	public GameObject lvlGen;
+	public GameObject fog;
 	public GameObject endGame;
 	public GameObject sampleWall;
 	private GameObject firstWall;
@@ -27,6 +28,7 @@ public class EndGame : MonoBehaviour {
 		if(timeLimit <= 0){
 			SpawnWalls ();
 			lvlGen.SetActive (false);
+			fog.SetActive (false);
 			timeLimit = Mathf.Infinity;
 		}
 	}

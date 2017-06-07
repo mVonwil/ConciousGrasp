@@ -37,12 +37,12 @@ public class EastTileCollision : MonoBehaviour {
 			Debug.Log ("East");
 			spawnerTransform.position = new Vector3 (spawnerTransform.position.x, spawnerTransform.position.y, spawnerTransform.position.z - tileSize);
 			genPosition.position = new Vector3 (genPosition.position.x, genPosition.position.y, genPosition.position.z - tileSize);
-			Instantiate (tileDb.tiles[Random.Range(0, tileDb.tiles.Count)], spawnerTransform.position, Quaternion.Euler(tileDb.tileRots[Random.Range(0, tileDb.tileRots.Count)]));
-			Instantiate(tileDb.tiles[Random.Range(0, tileDb.tiles.Count)], new Vector3 (spawnerTransform.position.x + tileSize, spawnerTransform.position.y, spawnerTransform.position.z), Quaternion.Euler(tileDb.tileRots[Random.Range(0, tileDb.tileRots.Count)]));
-			Instantiate(tileDb.tiles[Random.Range(0, tileDb.tiles.Count)], new Vector3 (spawnerTransform.position.x - tileSize, spawnerTransform.position.y, spawnerTransform.position.z), Quaternion.Euler(tileDb.tileRots[Random.Range(0, tileDb.tileRots.Count)]));
+			Instantiate (tileDb.tiles[Random.Range(0, tileDb.tiles.Count)], new Vector3 (spawnerTransform.position.x - 7.5f, spawnerTransform.position.y, spawnerTransform.position.z - 7.5f), Quaternion.Euler(tileDb.tileRots[Random.Range(0, tileDb.tileRots.Count)]));
+			Instantiate(tileDb.tiles[Random.Range(0, tileDb.tiles.Count)], new Vector3 ((spawnerTransform.position.x - 7.5f) + tileSize, spawnerTransform.position.y, spawnerTransform.position.z - 7.5f), Quaternion.Euler(tileDb.tileRots[Random.Range(0, tileDb.tileRots.Count)]));
+			Instantiate(tileDb.tiles[Random.Range(0, tileDb.tiles.Count)], new Vector3 ((spawnerTransform.position.x - 7.5f) - tileSize, spawnerTransform.position.y, spawnerTransform.position.z - 7.5f), Quaternion.Euler(tileDb.tileRots[Random.Range(0, tileDb.tileRots.Count)]));
 			spawnerTransform.localPosition = Vector3.zero;
 			//Move the tileRemover so that it is opposite to the spawner
-			removerTransform.position = new Vector3 (removerTransform.position.x, removerTransform.position.y - 5, removerTransform.position.z + (removeSize * 2));
+			removerTransform.position = new Vector3 (removerTransform.position.x, 0, removerTransform.position.z + (removeSize * 2));
 		}
 	}
 }

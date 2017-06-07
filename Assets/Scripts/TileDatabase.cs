@@ -8,6 +8,9 @@ public class TileDatabase : MonoBehaviour {
 	public GameObject tile2;
 	public GameObject tile3;
 	public GameObject tile4;
+	public GameObject tile5;
+	public GameObject tile6;
+	public GameObject tile7;
 
 	public List<GameObject> tiles = new List<GameObject> ();
 
@@ -23,6 +26,9 @@ public class TileDatabase : MonoBehaviour {
 		tiles.Add (tile2);
 		tiles.Add (tile3);
 		tiles.Add (tile4);
+		tiles.Add (tile5);
+		tiles.Add (tile6);
+		tiles.Add (tile7);
 
 		tileRots.Add (tileRot1);
 		tileRots.Add (tileRot2);
