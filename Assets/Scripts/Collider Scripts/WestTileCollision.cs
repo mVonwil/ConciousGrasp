@@ -43,14 +43,6 @@ public class WestTileCollision : MonoBehaviour {
 			spawnerTransform.localPosition = Vector3.zero;
 			//Move the tileRemover so that it is opposite to the spawner
 			removerTransform.position = new Vector3 (removerTransform.position.x, removerTransform.position.y - 5, removerTransform.position.z - (removeSize * 2));
-			//Start waiting co-routine;
-			//StartCoroutine (Waiting ());
 		}
 	}
-
-	//IEnumerator Waiting(){
-		//yield return new WaitForSeconds (0.1f);
-		//Move tileRemover to the centre of the LevelGenerator GameObject
-		//removerTransform.localPosition = new Vector3 (0, 1, 0);
-	//}
 }
