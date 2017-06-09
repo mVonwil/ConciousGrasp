@@ -27,5 +27,7 @@ public class PlayerMovement : MonoBehaviour {
 			transform.position += transform.right * moveSpeed * Time.deltaTime;
 		if (Input.GetKey (KeyCode.R))
 			SceneManager.LoadScene ("GridLevel");
+		if (Input.GetKey (KeyCode.Escape))
+			Application.Quit();
 	}
 }

@@ -6,12 +6,14 @@ public class RemoveTiles : MonoBehaviour {
 
 	public GameObject tileRemover;
 	public Transform removerTransform;
+	//public TerrainData tileData;
 
 	bool trig = false;
 
 	void Start(){
 		tileRemover = GameObject.FindGameObjectWithTag ("Remover");
 		removerTransform = tileRemover.transform;
+		//tileData = this.gameObject.GetComponent<TerrainData> ();
 	}
 
 	void OnTriggerEnter(Collider remove){

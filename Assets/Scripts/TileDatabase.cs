@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class TileDatabase : MonoBehaviour {
 
+	EndGame endGame;
+
 	public GameObject tile1;
 	public GameObject tile2;
 	public GameObject tile3;
@@ -11,6 +13,12 @@ public class TileDatabase : MonoBehaviour {
 	public GameObject tile5;
 	public GameObject tile6;
 	public GameObject tile7;
+	public GameObject tile8;
+	public GameObject tile9;
+	public GameObject tile10;
+	public GameObject tile11;
+	public GameObject tile12;
+	public GameObject tile13;
 
 	public List<GameObject> tiles = new List<GameObject> ();
 
@@ -21,6 +29,8 @@ public class TileDatabase : MonoBehaviour {
 
 	public List<Vector3> tileRots = new List<Vector3>();
 
+	public bool runOnce = false;
+
 	void Start(){
 		tiles.Add (tile1);
 		tiles.Add (tile2);
@@ -29,10 +39,24 @@ public class TileDatabase : MonoBehaviour {
 		tiles.Add (tile5);
 		tiles.Add (tile6);
 		tiles.Add (tile7);
+		tiles.Add (tile8);
+		tiles.Add (tile9);
+		tiles.Add (tile10);
+		tiles.Add (tile11);
+		tiles.Add (tile12);
 
 		tileRots.Add (tileRot1);
 		tileRots.Add (tileRot2);
 		tileRots.Add (tileRot3);
 		tileRots.Add (tileRot4);
+
+		endGame = GameObject.FindGameObjectWithTag ("EndGame").GetComponent<EndGame> ();
+	}
+
+	void Update(){
+		if (endGame.gameEnded == true && runOnce == false) {
+			tiles.Add (tile13);
+			runOnce = true;
+		}
 	}
 }

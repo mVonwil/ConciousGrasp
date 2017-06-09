@@ -13,6 +13,9 @@ TagManager:
   - Land
   - Database
   - Fog
+  - EndGame
+  - PlayerCamera
+  - EndSlate
   layers:
   - Default
   - TransparentFX
