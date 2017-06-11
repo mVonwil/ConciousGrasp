@@ -16,6 +16,7 @@ TagManager:
   - EndGame
   - PlayerCamera
   - EndSlate
+  - Light Orb
   layers:
   - Default
   - TransparentFX

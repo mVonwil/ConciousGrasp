@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 193338519663986224}
   - component: {fileID: 33639612543962544}
   - component: {fileID: 23990552702963884}
+  - component: {fileID: 64195695489427980}
   m_Layer: 0
   m_Name: Bush1 (2)
   m_TagString: Untagged
@@ -76,6 +77,7 @@ GameObject:
   - component: {fileID: 193018136957347684}
   - component: {fileID: 33351602591606852}
   - component: {fileID: 23287712348116940}
+  - component: {fileID: 64353649649621040}
   m_Layer: 0
   m_Name: Bush1
   m_TagString: Untagged
@@ -94,6 +96,7 @@ GameObject:
   - component: {fileID: 193905284670759732}
   - component: {fileID: 33477116399355072}
   - component: {fileID: 23235536732119810}
+  - component: {fileID: 64406263436958902}
   m_Layer: 0
   m_Name: Bush1 (1)
   m_TagString: Untagged
@@ -137,7 +140,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1124664408231512}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47.971695, y: 0, z: -11.629631}
+  m_LocalPosition: {x: 36.567505, y: 2.1450338, z: 10.706858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4113667043237798}
@@ -300,8 +303,50 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!64 &64195695489427980
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1046686429611358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4370008, guid: c7168d43100af6a4dadae1b4e5919efa, type: 2}
+--- !u!64 &64353649649621040
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1754501625155786}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4370008, guid: c7168d43100af6a4dadae1b4e5919efa, type: 2}
+--- !u!64 &64406263436958902
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1867670791583706}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4370008, guid: c7168d43100af6a4dadae1b4e5919efa, type: 2}
 --- !u!65 &65011115869096168
 BoxCollider:
   m_ObjectHideFlags: 1

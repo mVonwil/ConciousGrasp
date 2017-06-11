@@ -6,8 +6,14 @@ using UnityEngine.SceneManagement;
 public class PlayerMovement : MonoBehaviour {
 
 	public Rigidbody rb;
-	public float moveSpeed = 15;
+	public float moveSpeed = 5;
 	public GameObject camObject;
+	public AudioSource playerAudio;
+
+	void Start(){
+		playerAudio = this.GetComponent<AudioSource> ();
+		playerAudio.Play();
+	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
@@ -27,7 +33,5 @@ public class PlayerMovement : MonoBehaviour {
 			transform.position += transform.right * moveSpeed * Time.deltaTime;
 		if (Input.GetKey (KeyCode.R))
 			SceneManager.LoadScene ("GridLevel");
-		if (Input.GetKey (KeyCode.Escape))
-			Application.Quit();
 	}
 }

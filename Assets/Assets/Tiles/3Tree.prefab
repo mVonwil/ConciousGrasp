@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4272777582708110}
   - component: {fileID: 33896107479057892}
   - component: {fileID: 23029556868879738}
+  - component: {fileID: 64217762408940708}
   m_Layer: 0
   m_Name: OakCut2
   m_TagString: Untagged
@@ -54,6 +55,7 @@ GameObject:
   - component: {fileID: 4830562190256740}
   - component: {fileID: 33262484639733252}
   - component: {fileID: 23731262322728654}
+  - component: {fileID: 64674882211432374}
   m_Layer: 0
   m_Name: Root4
   m_TagString: Untagged
@@ -72,6 +74,7 @@ GameObject:
   - component: {fileID: 193012682715269042}
   - component: {fileID: 33915071005202518}
   - component: {fileID: 23060370798847750}
+  - component: {fileID: 65417876499209812}
   m_Layer: 0
   m_Name: Tree_Pine1
   m_TagString: Untagged
@@ -110,6 +113,7 @@ GameObject:
   - component: {fileID: 193539307519415274}
   - component: {fileID: 33655706093571860}
   - component: {fileID: 23339916496470162}
+  - component: {fileID: 65500871465963852}
   m_Layer: 0
   m_Name: Tree_Pine1 (1)
   m_TagString: Untagged
@@ -150,7 +154,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1637259735485514}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 43.869194, y: 4.7130885, z: -15.08504}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4614960902769824}
@@ -371,8 +375,36 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!64 &64217762408940708
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1290506905985468}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: fc1f85db785f4f04ab11bffa6553c158, type: 3}
+--- !u!64 &64674882211432374
+MeshCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1487070120985336}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Convex: 1
+  m_InflateMesh: 0
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: 34b68d04c8bd7004297ac0be30a77cb5, type: 3}
 --- !u!65 &65069192218991602
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -385,6 +417,30 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15, y: 0.1, z: 15}
   m_Center: {x: 7.5, y: 0, z: 7.5}
+--- !u!65 &65417876499209812
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1522125045389918}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 10, z: 1.5}
+  m_Center: {x: 0, y: 5, z: 0}
+--- !u!65 &65500871465963852
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1900146219460716}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.5, y: 10, z: 1.5}
+  m_Center: {x: 0, y: 5, z: 0}
 --- !u!114 &114126069669250464
 MonoBehaviour:
   m_ObjectHideFlags: 1

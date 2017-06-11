@@ -19,6 +19,16 @@ public class TileDatabase : MonoBehaviour {
 	public GameObject tile11;
 	public GameObject tile12;
 	public GameObject tile13;
+	public GameObject tile14;
+	public GameObject tile15;
+	public GameObject tile16;
+	public GameObject tile17;
+	public GameObject tile18;
+	public GameObject tile19;
+	public GameObject tile20;
+	public GameObject tile21;
+	public GameObject tile22;
+	public GameObject tile23;
 
 	public List<GameObject> tiles = new List<GameObject> ();
 
@@ -44,6 +54,16 @@ public class TileDatabase : MonoBehaviour {
 		tiles.Add (tile10);
 		tiles.Add (tile11);
 		tiles.Add (tile12);
+		tiles.Add (tile13);
+		tiles.Add (tile14);
+		tiles.Add (tile15);
+		tiles.Add (tile16);
+		tiles.Add (tile17);
+		tiles.Add (tile18);
+		tiles.Add (tile19);
+		tiles.Add (tile20);
+		tiles.Add (tile21);
+		tiles.Add (tile22);
 
 		tileRots.Add (tileRot1);
 		tileRots.Add (tileRot2);
@@ -55,7 +75,7 @@ public class TileDatabase : MonoBehaviour {
 
 	void Update(){
 		if (endGame.gameEnded == true && runOnce == false) {
-			tiles.Add (tile13);
+			tiles.Add (tile23);
 			runOnce = true;
 		}
 	}

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class EndGame : MonoBehaviour {
 
+	PlayerMovement playerMovement;
+
 	public float timeLimit;
 	public GameObject lvlGen;
 	public GameObject fog;
@@ -14,18 +16,21 @@ public class EndGame : MonoBehaviour {
 	private GameObject thirdWall;
 	public GameObject house;
 	private GameObject endHouse;
+	public GameObject orb;
 	public bool gameEnded = false;
 	public bool onEndTile = false;
 	public bool runOnce = false;
 
 	// Use this for initialization
 	void Start () {
-		timeLimit = 10;
+		timeLimit = 30;
 		endGame = this.gameObject;
+		playerMovement = GameObject.FindGameObjectWithTag ("Player").GetComponent<PlayerMovement> ();
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		Cursor.visible = false;
 		endGame.transform.position = lvlGen.transform.position;
 		timeLimit = timeLimit - Time.deltaTime;
 		if(timeLimit <= 0)
@@ -34,8 +39,13 @@ public class EndGame : MonoBehaviour {
 			SpawnWalls ();
 			lvlGen.SetActive (false);
 			fog.SetActive (false);
+			orb = GameObject.FindGameObjectWithTag ("Light Orb");
+			Destroy (orb);
+			playerMovement.playerAudio.Stop ();
 			runOnce = true;
 		}
+		if (Input.GetKey (KeyCode.Escape))
+			Application.Quit ();
 	}
 
 	void SpawnWalls(){
