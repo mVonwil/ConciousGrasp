@@ -21,7 +21,6 @@ GameObject:
   - component: {fileID: 4076157044302038}
   - component: {fileID: 154017691138934284}
   - component: {fileID: 218111582793561798}
-  - component: {fileID: 114088171873667682}
   - component: {fileID: 65578312657678106}
   - component: {fileID: 54654020198584618}
   m_Layer: 0
@@ -46,7 +45,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4076157044302038
 Transform:
   m_ObjectHideFlags: 1
@@ -54,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1447581937362042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.1, y: 0, z: -15.91}
+  m_LocalPosition: {x: -64.757545, y: 59.867897, z: -39.601322}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4144879958656600}
@@ -101,19 +100,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15, y: 0.1, z: 15}
   m_Center: {x: 7.5, y: 0, z: 7.5}
---- !u!114 &114088171873667682
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1447581937362042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6bd86ba5ad6d2141bc709050496e9c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileRemover: {fileID: 0}
-  removerTransform: {fileID: 0}
 --- !u!114 &114267954359797364
 MonoBehaviour:
   m_ObjectHideFlags: 1

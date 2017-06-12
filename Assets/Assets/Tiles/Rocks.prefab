@@ -39,7 +39,6 @@ GameObject:
   - component: {fileID: 4704908728570586}
   - component: {fileID: 154881161629842546}
   - component: {fileID: 218155817735057386}
-  - component: {fileID: 114610755798106766}
   - component: {fileID: 65726144587521524}
   - component: {fileID: 54628115805633594}
   m_Layer: 0
@@ -131,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1325882064930126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.243843, y: 0, z: 35.709133}
+  m_LocalPosition: {x: -65.120834, y: 33.432983, z: -25.100826}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4062128455230598}
@@ -271,19 +270,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15, y: 0.1, z: 15}
   m_Center: {x: 7.5, y: 0, z: 7.5}
---- !u!114 &114610755798106766
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1325882064930126}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6bd86ba5ad6d2141bc709050496e9c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileRemover: {fileID: 0}
-  removerTransform: {fileID: 0}
 --- !u!114 &114681527848729178
 MonoBehaviour:
   m_ObjectHideFlags: 1

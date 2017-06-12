@@ -183,7 +183,6 @@ GameObject:
   - component: {fileID: 4219439516986474}
   - component: {fileID: 154206189826074574}
   - component: {fileID: 218615467362451620}
-  - component: {fileID: 114198221103136646}
   - component: {fileID: 65810530697829084}
   - component: {fileID: 54878045343260728}
   m_Layer: 0
@@ -1027,19 +1026,6 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &114198221103136646
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1609254507424492}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6bd86ba5ad6d2141bc709050496e9c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileRemover: {fileID: 0}
-  removerTransform: {fileID: 0}
 --- !u!114 &114792833655402254
 MonoBehaviour:
   m_ObjectHideFlags: 1

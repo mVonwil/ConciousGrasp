@@ -94,7 +94,6 @@ GameObject:
   - component: {fileID: 154417637053284108}
   - component: {fileID: 218407522148504012}
   - component: {fileID: 65941960815436892}
-  - component: {fileID: 114819040003563726}
   - component: {fileID: 54296715840406718}
   - component: {fileID: 114534248034292758}
   m_Layer: 0
@@ -548,19 +547,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mouseLook: {fileID: 0}
   endGame: {fileID: 0}
---- !u!114 &114819040003563726
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1672431179025652}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6bd86ba5ad6d2141bc709050496e9c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileRemover: {fileID: 0}
-  removerTransform: {fileID: 0}
+  runOnce: 0
 --- !u!135 &135026929739682576
 SphereCollider:
   m_ObjectHideFlags: 1

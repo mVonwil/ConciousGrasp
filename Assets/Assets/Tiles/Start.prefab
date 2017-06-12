@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 154000995059614844}
   - component: {fileID: 218395034047717782}
   - component: {fileID: 65727578276037242}
-  - component: {fileID: 114683246452500070}
   - component: {fileID: 54958182856700442}
   m_Layer: 0
   m_Name: Start
@@ -101,19 +100,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 15, y: 1, z: 15}
   m_Center: {x: 7.5, y: 0, z: 7.5}
---- !u!114 &114683246452500070
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1137761290011586}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6bd86ba5ad6d2141bc709050496e9c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileRemover: {fileID: 0}
-  removerTransform: {fileID: 0}
 --- !u!114 &114729272232915232
 MonoBehaviour:
   m_ObjectHideFlags: 1

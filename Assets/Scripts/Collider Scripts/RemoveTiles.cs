@@ -26,4 +26,7 @@ public class RemoveTiles : MonoBehaviour {
 		}
 	}
 
+	void DeleteTile(){
+		Destroy (this.gameObject);
+	}
 }

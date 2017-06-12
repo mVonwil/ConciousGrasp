@@ -39,7 +39,6 @@ GameObject:
   - component: {fileID: 4742793024838674}
   - component: {fileID: 154677682853561858}
   - component: {fileID: 218116298560329136}
-  - component: {fileID: 114529925728199514}
   - component: {fileID: 65308176221393584}
   - component: {fileID: 54244031409698208}
   m_Layer: 0
@@ -269,19 +268,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tileDb: {fileID: 0}
---- !u!114 &114529925728199514
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1720319989027584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6bd86ba5ad6d2141bc709050496e9c1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tileRemover: {fileID: 0}
-  removerTransform: {fileID: 0}
 --- !u!154 &154677682853561858
 TerrainCollider:
   m_ObjectHideFlags: 1
